@@ -12,6 +12,10 @@ public class Gerente extends Empleado {
 		}
 	}
 	
+	public double getBonificacion() {
+		return this.getSalario() + super.getBonificacion();
+	}
+	
 	public void setContraseña(int contraseña) {
 		this.contraseña = contraseña;
 	}
