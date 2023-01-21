@@ -25,5 +25,15 @@ public class TestEmpleado {
         System.out.println(autenticou);
 
         System.out.println(g1.getBonificacion());
+        
+        EditorVideo julian = new EditorVideo();
+        Designer andrea = new Designer();
+        
+        ControlBonificacion totalBonificaciones = new ControlBonificacion();
+        
+        totalBonificaciones.registrar(julian);
+        totalBonificaciones.registrar(andrea);
+        
+        System.out.println("Total bonificaciones REGISTRADAS a la fecha: " + totalBonificaciones.getSuma());
 	}
 }
