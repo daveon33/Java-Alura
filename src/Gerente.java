@@ -1,8 +1,9 @@
 
-public class Gerente extends Empleado {
+public class Gerente extends Empleado implements Autenticado {
 	
 	private int contraseña;
 	
+	@Override
 	public boolean autenticar(int contraseña) {
 		
 		if(this.contraseña == contraseña) {
@@ -16,6 +17,7 @@ public class Gerente extends Empleado {
 		return this.getSalario() + super.getBonificacion();
 	}
 	
+	@Override
 	public void setContraseña(int contraseña) {
 		this.contraseña = contraseña;
 	}
