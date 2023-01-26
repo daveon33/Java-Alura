@@ -7,7 +7,7 @@ public class TestArrayList {
 	
 	public static void main(String[] args) {
 		
-		ArrayList lista = new ArrayList();
+		ArrayList<Cuenta> lista = new ArrayList<>();
 		
 		Cuenta cc = new CuentaCorriente(22, 11);
 		lista.add(cc);
