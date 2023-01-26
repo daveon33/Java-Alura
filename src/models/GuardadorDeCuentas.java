@@ -2,15 +2,15 @@ package models;
 
 public class GuardadorDeCuentas {
 	
-	private Cuenta[] referencias;
+	private Object[] referencias;
 	private int freeIndex;
 	
 	public GuardadorDeCuentas() {
-		this.referencias = new Cuenta[10];
+		this.referencias = new Object[10];
 		this.freeIndex = 0;
 	}
 	
-	public void adicionar(Cuenta ref) {
+	public void adicionar(Object ref) {
 		this.referencias[this.freeIndex] = ref;
 		this.freeIndex++;
 	}
@@ -19,7 +19,7 @@ public class GuardadorDeCuentas {
 		return this.freeIndex;
 	}
 
-	public Cuenta getReferencia(int i) {
+	public Object getReferencia(int i) {
 		return this.referencias[i];
 	}
 	

@@ -17,7 +17,7 @@ public class TestGuardadorCuentas {
 		int currentSize = guardador.getCantidadDeElementos();
 		System.out.println(currentSize);
 		
-		Cuenta ref = guardador.getReferencia(0);
+		Cuenta ref = (Cuenta) guardador.getReferencia(0);
 		System.out.println(ref.getNumero());
 		
 	}
