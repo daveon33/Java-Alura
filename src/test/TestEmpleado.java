@@ -1,3 +1,5 @@
+package test;
+import models.*;
 
 public class TestEmpleado {
 	

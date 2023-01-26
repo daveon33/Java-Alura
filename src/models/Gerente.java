@@ -1,17 +1,8 @@
+package models;
 
 public class Gerente extends Empleado implements Autenticado {
 	
-	private int contraseña;
-	
-	@Override
-	public boolean autenticar(int contraseña) {
-		
-		if(this.contraseña == contraseña) {
-			return true;
-		} else {
-			return false;
-		}
-	}
+	private AutenticacionUtil auth = new AutenticacionUtil();
 	
 	public double getBonificacion() {
 		return this.getSalario() + super.getBonificacion();
@@ -19,6 +10,11 @@ public class Gerente extends Empleado implements Autenticado {
 	
 	@Override
 	public void setContraseña(int contraseña) {
-		this.contraseña = contraseña;
+		this.auth.setContraseña(contraseña);
+	}
+
+	@Override
+	public boolean autenticar(int contraseña) {
+		return this.auth.autenticar(contraseña);
 	}
 }
